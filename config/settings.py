@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fincas',
+    'tarea',
     'drf_spectacular',
     'rest_framework',
 ]
