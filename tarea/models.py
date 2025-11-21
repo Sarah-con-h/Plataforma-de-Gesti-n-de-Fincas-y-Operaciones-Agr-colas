@@ -35,7 +35,7 @@ class TipoTarea(models.Model):
         verbose_name = 'Tipo de Tarea'
         verbose_name_plural = 'Tipos de Tareas'
     
-    def _str_(self):
+    def __str__(self):
         return f"{self.nombre} ({self.get_categoria_display()})"
 
 
@@ -121,7 +121,7 @@ class Tarea(models.Model):
             models.Index(fields=['lote', 'estado']),
         ]
     
-    def _str_(self):
+    def __str__(self):
         return f"{self.titulo} - {self.lote.codigo} ({self.get_estado_display()})"
     
     def total_trabajadores(self):

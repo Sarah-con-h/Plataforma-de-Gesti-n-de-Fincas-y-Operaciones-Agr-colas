@@ -7,7 +7,7 @@ class TipoTareaAdmin(admin.ModelAdmin):
     list_display = ['nombre', 'categoria', 'duracion_estimada_horas', 'activo']
     list_filter = ['categoria', 'activo']
     search_fields = ['nombre', 'descripcion']
-    readonly_fields = ['fecha_creacion', 'fecha_actualizacion']
+    readonly_fields = []
 
 
 @admin.register(Tarea)
