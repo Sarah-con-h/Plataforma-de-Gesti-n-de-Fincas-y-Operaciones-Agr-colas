@@ -16,9 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
+from django.views.generic import RedirectView
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Redirigir la raíz a la documentación interactiva
+    path('', RedirectView.as_view(url='/api/docs/', permanent=False)),
+
+    # OpenAPI schema and Swagger UI
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+
+    # API endpoints (cada aplicación registra sus rutas dentro de su `urls.py`)
+    path('api/', include('fincas.urls')),
+    path('api/', include('tarea.urls')),
     path('', include('fincas.urls')),
     path('trabajadores/', include('trabajadores.urls')),
 ]
