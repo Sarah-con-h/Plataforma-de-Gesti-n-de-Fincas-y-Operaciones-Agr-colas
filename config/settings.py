@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'tarea',
     'drf_spectacular',
     'rest_framework',
+    'trabajadores',
+     
 ]
 
 MIDDLEWARE = [

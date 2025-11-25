@@ -3,7 +3,7 @@
 # Create your models here.
 from django.db import models
 from django.core.validators import MinValueValidator, RegexValidator
-from tareas.models import Tarea
+from tarea.models import Tarea 
 
 
 class Trabajador(models.Model):
@@ -91,7 +91,7 @@ class Trabajador(models.Model):
             models.Index(fields=['numero_identificacion']),
         ]
     
-    def _str_(self):
+    def __str__(self):
         return f"{self.nombres} {self.apellidos} - {self.get_rol_display()}"
     
     def nombre_completo(self):
@@ -169,7 +169,7 @@ class Asignacion(models.Model):
             models.Index(fields=['tarea', 'fecha_asignacion']),
         ]
     
-    def _str_(self):
+    def __str__(self):
         return f"{self.trabajador.nombre_completo()} → {self.tarea.titulo}"
     
     def costo_mano_obra(self):
