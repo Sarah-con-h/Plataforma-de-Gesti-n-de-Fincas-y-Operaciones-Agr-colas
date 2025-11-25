@@ -31,6 +31,5 @@ urlpatterns = [
     # API endpoints (cada aplicación registra sus rutas dentro de su `urls.py`)
     path('api/', include('fincas.urls')),
     path('api/', include('tarea.urls')),
-    path('', include('fincas.urls')),
-    path('trabajadores/', include('trabajadores.urls')),
+    path('api/', include('trabajadores.urls')),
 ]
