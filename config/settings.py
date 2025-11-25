@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'insumos',
     'drf_spectacular',
     'rest_framework',
+    'trabajadores',
+     
 ]
 
 MIDDLEWARE = [
