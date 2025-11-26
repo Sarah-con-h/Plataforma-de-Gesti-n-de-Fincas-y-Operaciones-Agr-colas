@@ -1,11 +1,20 @@
 from rest_framework import viewsets, filters
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from drf_spectacular.utils import extend_schema_view, extend_schema
 
 from .models import TipoTarea, Tarea
 from .serializer import TipoTareaSerializer, TareaSerializer
 
 
+@extend_schema_view(
+    list=extend_schema(tags=['🌾 Tipos de Tarea']),
+    create=extend_schema(tags=['🌾 Tipos de Tarea']),
+    retrieve=extend_schema(tags=['🌾 Tipos de Tarea']),
+    update=extend_schema(tags=['🌾 Tipos de Tarea']),
+    partial_update=extend_schema(tags=['🌾 Tipos de Tarea']),
+    destroy=extend_schema(tags=['🌾 Tipos de Tarea']),
+)
 class TipoTareaViewSet(viewsets.ModelViewSet):
     queryset = TipoTarea.objects.all()
     serializer_class = TipoTareaSerializer
@@ -16,6 +25,14 @@ class TipoTareaViewSet(viewsets.ModelViewSet):
     ordering_fields = ['duracion_estimada_horas']
 
 
+@extend_schema_view(
+    list=extend_schema(tags=['🌾 Operaciones - Tareas']),
+    create=extend_schema(tags=['🌾 Operaciones - Tareas']),
+    retrieve=extend_schema(tags=['🌾 Operaciones - Tareas']),
+    update=extend_schema(tags=['🌾 Operaciones - Tareas']),
+    partial_update=extend_schema(tags=['🌾 Operaciones - Tareas']),
+    destroy=extend_schema(tags=['🌾 Operaciones - Tareas']),
+)
 class TareaViewSet(viewsets.ModelViewSet):
     queryset = Tarea.objects.all()
     serializer_class = TareaSerializer

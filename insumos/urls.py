@@ -6,6 +6,8 @@ from .views import (
     resumen_inventario
 )
 
+app_name = 'insumos'
+
 urlpatterns = [
     path('insumos/', InsumoListCreateView.as_view()),
     path('insumos/<int:pk>/', InsumoDetailView.as_view()),

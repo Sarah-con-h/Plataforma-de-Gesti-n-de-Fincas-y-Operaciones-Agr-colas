@@ -28,9 +28,16 @@ urlpatterns = [
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
 
-    # API endpoints (cada aplicación registra sus rutas dentro de su `urls.py`)
+    # API endpoints organizados por categorías
+    # Gestión de Fincas y Lotes
     path('api/', include('fincas.urls')),
-    path('api/', include('tarea.urls')),
-    path('api/', include('insumos.urls')),
-    path('api/', include('trabajadores.urls')),
+    
+    # Operaciones y Tareas Agrícolas
+    path('api/operaciones/', include('tarea.urls')),
+    
+    # Inventario de Insumos
+    path('api/inventario/', include('insumos.urls')),
+    
+    # Gestión de Recursos Humanos (RRH)
+    path('api/rrhh/', include('trabajadores.urls')),
 ]

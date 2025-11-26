@@ -1,10 +1,19 @@
 from rest_framework import viewsets, filters, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from drf_spectacular.utils import extend_schema_view, extend_schema
 from .models import Finca, Lote
 from .serializers import FincaSerializer, FincaListSerializer, LoteSerializer
 
 
+@extend_schema_view(
+    list=extend_schema(tags=['🏠 Gestión de Fincas']),
+    create=extend_schema(tags=['🏠 Gestión de Fincas']),
+    retrieve=extend_schema(tags=['🏠 Gestión de Fincas']),
+    update=extend_schema(tags=['🏠 Gestión de Fincas']),
+    partial_update=extend_schema(tags=['🏠 Gestión de Fincas']),
+    destroy=extend_schema(tags=['🏠 Gestión de Fincas']),
+)
 class FincaViewSet(viewsets.ModelViewSet):
     """
     ViewSet para gestionar Fincas.
@@ -48,6 +57,14 @@ class FincaViewSet(viewsets.ModelViewSet):
         })
 
 
+@extend_schema_view(
+    list=extend_schema(tags=['🏠 Gestión de Lotes']),
+    create=extend_schema(tags=['🏠 Gestión de Lotes']),
+    retrieve=extend_schema(tags=['🏠 Gestión de Lotes']),
+    update=extend_schema(tags=['🏠 Gestión de Lotes']),
+    partial_update=extend_schema(tags=['🏠 Gestión de Lotes']),
+    destroy=extend_schema(tags=['🏠 Gestión de Lotes']),
+)
 class LoteViewSet(viewsets.ModelViewSet):
     """
     ViewSet para gestionar Lotes.

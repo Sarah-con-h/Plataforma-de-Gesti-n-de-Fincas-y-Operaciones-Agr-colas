@@ -5,4 +5,5 @@ router = DefaultRouter()
 router.register(r'trabajadores', TrabajadorViewSet, basename='trabajador')
 router.register(r'asignaciones', AsignacionViewSet, basename='asignacion')
 
+app_name = 'trabajadores'
 urlpatterns = router.urls
