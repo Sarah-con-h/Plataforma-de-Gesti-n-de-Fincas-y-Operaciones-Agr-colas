@@ -26,19 +26,18 @@ Plataforma backend que permite administrar todas las operaciones de una explotac
 
 ```bash
 git clone https://github.com/Sarah-con-h/Plataforma-de-Gesti-n-de-Fincas-y-Operaciones-Agr-colas.git
-
+```
 ### 2. Crear y activar entorno virtual
 
 ```bash
 # Windows
 python -m venv .venv
 venv\Scripts\activate
-
+```
 ### 3. Instalar dependencias
 
 ```bash
-pip install -r requirements.txt
-```
+pip install -r requirements.txt```
 
 ### 4. Configurar variables de entorno
 
@@ -340,7 +339,7 @@ git pull origin main
 | **Sarah** | Líder / Dev | Fincas/Lotes | Config inicial + App Fincas |
 | **Mariana** | Desarrollador | Tareas Agrícolas | CRUD Tareas + Planificación |
 | **Saira** | Desarrollador | Trabajadores | Gestión personal + Asignaciones |
-| **Sarah** | Desarrollador | Insumos | Control inventario + Trazabilidad |
+| **Sara** | Desarrollador | Insumos | Control inventario + Trazabilidad |
 
 ## Contribución
 
