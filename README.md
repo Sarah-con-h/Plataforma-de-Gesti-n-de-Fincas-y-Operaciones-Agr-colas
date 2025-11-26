@@ -1,3 +1,8 @@
+# link de la api 
+
+https://plataforma-de-gesti-n-de-fincas-y.onrender.com/api/docs/
+
+
 # Plataforma de Gestión de Fincas y Operaciones Agrícolas
 
 Sistema modular desarrollado con Django REST Framework para la administración integral de operaciones agrícolas, incluyendo gestión de fincas, tareas, trabajadores e insumos.
